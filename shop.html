@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Productos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.jpg">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    
+
+</head>
+
+<body><nav class="navbar navbar-expand-lg bg-white navbar-light d-none d-lg-block" id="templatemo_nav_top">
+    <div class="container text-light">
+        <div class="w-100 d-flex justify-content-end">
+            <div>
+                <a class="text-dark" href="https://www.facebook.com/profile.php?id=61575149525683&locale=es_LA" target="_blank" rel="noopener">
+                    <i class="fab fa-facebook-f fa-sm fa-fw me-3"></i>
+                </a>
+                <a class="text-dark" href="https://www.instagram.com/enviocontraentrega/" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram fa-sm fa-fw me-3"></i>
+                </a>
+                <a class="text-dark" href="https://www.tiktok.com/@virtualworldshopcolombia" target="_blank" rel="noopener">
+                    <i class="fab fa-tiktok fa-sm fa-fw me-3"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Navbar principal en amarillo -->
+<nav class="navbar navbar-expand-lg navbar-light shadow" style="background-color: #FFD333;">
+    <div class="container d-flex justify-content-between align-items-center">
+
+    <a class="navbar-brand text-dark logo h1 align-self-center" href="index.html">
+    W<span style="color:#FFA500;">o</span>rldSh<span style="color:#FFA500;">o</span>p
+</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+            <div class="flex-fill">
+                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="about.html">Quienes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="shop.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="contact.html">Soporte</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar align-self-center d-flex">
+                
+                
+                
+            </div>
+        </div>
+
+    </div>
+</nav> <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 50px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .slider-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slider-images img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .slider-text {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+    }
+
+    .slider-text span {
+      margin-right: 10px;
+    }
+
+    .slider-text span:hover {
+      color: #ff8a00;
+      text-decoration: underline;
+    }
+
+    .slider-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .btn {
+      background-color: rgba(0, 0, 0, 0.4);
+      border: none;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    @media (max-width: 600px) {
+      .slider-images img {
+        height: 250px;
+      }
+
+      .slider-text {
+        font-size: 1rem;
+        bottom: 10px;
+        left: 10px;
+      }
+
+      .btn {
+        font-size: 24px;
+        padding: 8px;
+      }
+    }
+
+
+
+
+    .slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 15px 30px rgba(0, 0, 0, 0.4); /* Sombra más oscura y fuerte */
+  background-color: #fff; /* Fondo blanco para que la sombra resalte más */
+  z-index: 1; /* Asegura que la sombra esté detrás del slider */
+}
+
+.slider-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para resaltar más el texto */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  z-index: 2; /* Asegura que el texto esté encima de las imágenes */
+}
+
+.slider-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 2; /* Asegura que los botones estén encima del slider */
+}
+
+.btn {
+  background-color: rgba(0, 0, 0, 0.5); /* Más oscuro para los botones */
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Oscuro cuando se pasa el mouse */
+}
+  </style>
+</head>
+<body>
+
+
+
+<script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <style>
+        .slider-contenedor {
+            width: 100%;
+            overflow: hidden;
+            background-color: #f0f0f0; /* Un fondo claro para el contenedor */
+        }
+
+        .slider-texto {
+            white-space: nowrap;
+            padding: 15px 0;
+            font-size: 1.2em;
+            color: #333; /* Color del texto */
+            animation: correr 15s linear infinite; /* Animación de izquierda a derecha */
+        }
+
+        @keyframes correr {
+            0% {
+                transform: translateX(100%); /* Empieza fuera de la pantalla a la derecha */
+            }
+            100% {
+                transform: translateX(-100%); /* Termina fuera de la pantalla a la izquierda */
+            }
+        }
+    </style>
+     <div class="slider-contenedor">
+        <div class="slider-texto">
+            ¡GRAN OFERTA! !TODOS LOS PRODUCTOS CON DESCUENTO APLICADO!
+        </div>
+    </div>
+
+
+    <div class="container-title text-center">
+      <h1 class="text-success">
+        Todos los productos
+      </h1>
+    </div>
+
+    <style>
+      .product-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease-in-out;
+      }
+    
+      .product-card:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+    
+      .product-img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        object-position: center;
+        background-color: #fff;
+        padding: 10px;
+      }
+    
+      .card-body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    
+      .price {
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #198754;
+      }
+    
+      .old-price {
+        text-decoration: line-through;
+        color: gray;
+        font-size: 0.9rem;
+        margin-left: 8px;
+      }
+    
+      .whatsapp-btn {
+        background-color: #25D366;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 3rem;
+        font-size: 0.9rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        transition: background-color 0.3s;
+        text-decoration: none;
+      }
+    
+      .whatsapp-btn:hover {
+        background-color: #128C7E;
+      }
+    
+      .whatsapp-btn i {
+        font-size: 1.2rem;
+      }
+    </style>
+    
+    <!-- Contenedor principal de productos -->
+    <div class="container my-5">
+      <div class="row g-4">
+        <!-- Producto 1 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card">
+            <img src="./assets/img/01.png" class="card-img-top product-img" alt="Producto 1">
+            <div class="card-body">
+              <h5 class="card-title">Cinturón Corrector de Postura</h5>
+              <p class="card-text">Talla: Unisex. Hay 9 tallas para elegir.</p>
+              <p class="price">$49.000</p>
+              <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+              </a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Producto 2 (copia del anterior para ejemplo) -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card">
+            <img src="./assets/img/02.jpeg" class="card-img-top product-img" alt="Producto 2">
+            <div class="card-body">
+              <h5 class="card-title">Bolso Louis Vuitton Trio</h5>
+              <p class="card-text"> Bolso Louis Vuitton Dama + Manos Libres + Cosmetiquera.</p>
+              <p class="price">$149.000</p>
+              <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+              </a>
+            </div>
+          </div>
+        </div>
+    
+         <!-- Producto 2 (copia del anterior para ejemplo) -->
+         <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card">
+            <img src="./assets/img/03.jpg" class="card-img-top product-img" alt="Producto 2">
+            <div class="card-body">
+              <h5 class="card-title">Lampara De Plasma Magica</h5>
+              <p class="card-text"> Tamaño de la luz de la bola: 10x7,9x13,8 cm.</p>
+              <p class="price">$130.000</p>
+              <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+              </a>
+            </div>
+          </div>
+        </div>
+     <!-- CARTA DE PRODUCTO -->
+     <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/04.jpeg" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Gafas Unisex Versace</h5>
+          <p class="card-text"> Filtro UV 400.</p>
+          <p class="price">$69.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARTA DE PRODUCTO -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/05.png" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Multitoma Corriente Torre Vertical 3 Niv</h5>
+          <p class="card-text"> Enchufe universal.</p>
+          <p class="price">$79.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARTA DE PRODUCTO -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/06.png" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Platero Escurridor Con Cajon De 65cm</h5>
+          <p class="card-text"> Mantén tu espacio ordenado con nuestro práctico platero organizador..</p>
+          <p class="price">$149.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARTA DE PRODUCTO -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/10.png" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Adaptador Carro 4 En 1</h5>
+          <p class="card-text"> Cargador Retráctil 4 en 1 para Auto – ¡Potencia y Orden en un Solo Clic!.</p>
+          <p class="price">$59.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARTA DE PRODUCTO -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/11.jpeg" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Watch Onn Hd 4k</h5>
+          <p class="card-text">  ONN 4K Streaming Box – Tu centro de entretenimiento inteligente.</p>
+          <p class="price">$149.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARTA DE PRODUCTO -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/12.png" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Esfera De Luz Base Metal Decorativa</h5>
+          <p class="card-text"> Material de alta calidad: el soporte de la lámpara está hecho de madera maciza y la esfera está hecha de vidrio.</p>
+          <p class="price">$59.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARTA DE PRODUCTO -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/13.gif" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Dispensador De Agua Micelar</h5>
+          <p class="card-text"> Capacidad: 250 ml, Material: Plástico BPA-Free, Dimensiones: 15 cm de alto, 7 cm de diámetro</p>
+          <p class="price">$39.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARTA DE PRODUCTO -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/14.jpg" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Cepillo a vapor para moscotas</h5>
+          <p class="card-text"> Cepillo de vapor para mascotas 3 en 1 electrico</p>
+          <p class="price">$35.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CARTA DE PRODUCTO -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/18.jpg" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Organizador De Maquillaje Giratorio</h5>
+          <p class="card-text">Organizador Cosmético Rotatorio 360°.</p>
+          <p class="price">$59.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+     <!-- CARTA DE PRODUCTO -->
+     <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/26.webp" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Juego De Rache 46 Piezas</h5>
+          <p class="card-text">Juego De copas, llaves por 46 Piezas Mecanica Automotriz Ratchet 1/4.</p>
+          <p class="price">$49.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+     <!-- CARTA DE PRODUCTO -->
+     <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/65.jpeg" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Bolso Louis Vuiton Cosmetiquera</h5>
+          <p class="card-text"> Bolso Louis Vuitton Dama + Cosmetiquera.</p>
+          <p class="price">$119.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+     <!-- CARTA DE PRODUCTO -->
+     <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/74.webp" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Perchero Armario 2 Cuerpos Metalico</h5>
+          <p class="card-text">Ahorro Efectivo de Espacio: Perchero multiusos con perchero, zapatero, pantalonero, sombrerero y almacenaje en uno..</p>
+          <p class="price">$100.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+     <!-- CARTA DE PRODUCTO -->
+     <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/97.png" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Difusor Humidificador De Aromas 400ml</h5>
+          <p class="card-text">Difusor de aromas esenciales para el hogar.</p>
+          <p class="price">$80.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/47.jpeg" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Dylan Blue Men</h5>
+          <p class="card-text">DYLAN BLUEN MEN 100 ML MAS PERFUMERO RECARGABLE.</p>
+          <p class="price">$69.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/66.jpeg" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Versace Eros Flame</h5>
+          <p class="card-text">EROS FLAME 100 ML MAS PERFUMERO RECARGABLE.</p>
+          <p class="price">$69.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/46.jpeg" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Acqua Di Gio</h5>
+          <p class="card-text">ACQUA DI GIO MAS PERFUMERO RECARGABLE.</p>
+          <p class="price">$69.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card">
+        <img src="./assets/img/41.png" class="card-img-top product-img" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Combo x 3 versace</h5>
+          <p class="card-text">EROS, EROS FLAME, DYLAN BLUE-VERSACE
+            TAMAÑO 100ML.</p>
+          <p class="price">$169.000</p>
+          <a href="https://wa.me/573017711945?text=Hola, quiero realizar el pedido de este producto:" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Realizar pedido contraentrega
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<!-- Start Footer -->
+<footer class="bg-dark" id="tempaltemo_footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-success border-bottom pb-3 border-light logo">WorldShop</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt fa-fw"></i>
+                        Bogotá, Colombia
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope fa-fw"></i>
+                        <a class="text-decoration-none" href="mailto:contactoworldshopcolombia@gmail.com">
+                            contactoworldshopcolombia@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 pt-5">
+             
+            </div>
+
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">Información</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="#">Inicio</a></li>
+                    <li><a class="text-decoration-none" href="#">Quiénes Somos</a></li>
+                    <li><a class="text-decoration-none" href="#">Ubicaciones</a></li>
+                    <li><a class="text-decoration-none" href="#">Preguntas Frecuentes</a></li>
+                    <li><a class="text-decoration-none" href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="row text-light mb-4">
+            <div class="col-12 mb-3">
+                <div class="w-100 my-3 border-top border-light"></div>
+            </div>
+            <div class="col-auto me-auto">
+                <ul class="list-inline text-left footer-icons">
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://www.facebook.com/profile.php?id=61575149525683"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/enviocontraentrega/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                    </li>
+                    
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+    <a class="text-light text-decoration-none" target="_blank" href="https://www.tiktok.com/@virtualworldshopcolombia?lang=es">
+        <i class="fab fa-tiktok fa-lg fa-fw"></i>
+    </a>
+</li>
+                </ul>
+            </div>
+            <div class="col-auto">
+                <label class="sr-only" for="subscribeEmail">Correo electrónico</label>
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Correo electrónico">
+                    <div class="input-group-text btn-success text-light">Suscribirse</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-100 bg-black py-3">
+        <div class="container">
+            <div class="row pt-2">
+                <div class="col-12">
+                    <p class="text-left text-light">
+                        &copy; 2021 WorldShop | Diseñado por <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+    <!-- End Footer -->
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- End Script -->
+</body>
+
+</html>
